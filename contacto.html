@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Paula Herrera H">
+    <meta name="description" content="Página donde se explican las meta etiquetas">
+    <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3">
+    <title>Galería de Arte</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+<header>
+    <h1>Bienvenido a la Galería de Animales</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+<!-- Página de contacto -->
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Envíanos tus datos y te contactaremos.</p>
+    <label for="tipo_solicitud">Tipo de Solicitud:</label>
+    <select id="tipo_solicitud" name="tipo_solicitud">
+        <option value="compra">Compra</option>
+        <option value="consulta">Consulta</option>
+        <option value="venta">Venta</option>
+    </select>
+    <form action="enviar_formulario.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        <label for="telefono">Telefono:</label>
+        <input type="text" id="telefono" name="telefono" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+</section>
+<footer>
+    <p>&copy; 2024 Galería de Animales. Todos los derechos reservados.</p>
+</footer>

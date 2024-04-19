@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="x">
+    <meta name="description" content="Página donde se explican las meta etiquetas">
+    <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3">
+    <title>Galería de Arte</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Galería</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+<section id="GALERIA">
+    <h1>GALERIA DE ANIMALES</h1>
+</section>
+    <style>
+        /* Estilos para el carrusel y las flechas */
+        .carousel-container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .carousel-img {
+            display: none;
+            max-width: 100%;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 20px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            outline: none;
+            z-index: 2;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+
+<body>
+
+    <div class="carousel-container">
+        <img class="carousel-img" src="perro.jpg" alt="Imagen 1">
+        <img class="carousel-img" src="gato.jpg" alt="Imagen 2">
+        <img class="carousel-img" src="cebra.jpg" alt="Imagen 3">
+        <img class="carousel-img" src="leones.jpg" alt="Imagen 4">
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+    </body>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("carousel-img");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+<footer>
+        <p>&copy; 2024 Galería de Animales. Todos los derechos reservados.</p>
+
+</footer>
+
+</html>
